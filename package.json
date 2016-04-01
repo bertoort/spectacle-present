@@ -1,6 +1,6 @@
 {
   "name": "spectacle-present",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spectacle presentation server with a single command.",
   "main": "lib/index.js",
   "scripts": {

@@ -4,12 +4,12 @@ Simple way to run a spectacle presentation
 
 ### Reference
 
-[Spectacle](https://github.com/FormidableLabs/spectacle/)
-[Spectacle Slide Example](https://github.com/bertoort/spectacle-present/blob/master/example/slide.js)
+* [Spectacle](https://github.com/FormidableLabs/spectacle/)
+* [Spectacle Slide Example](https://github.com/bertoort/spectacle-present/blob/master/example/slide.js)
 
 ### Installation
 
-`npm i -S spectacle-present`
+`npm i -g spectacle-present`
 
 ### Usage
 
