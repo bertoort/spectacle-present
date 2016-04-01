@@ -21,11 +21,11 @@ if(program.args.length > 2) {
     program.help();
 }
 
+var serverPort = program.port || 3000;
+
 var pathArg = program.args[0];
 var presentation = path.resolve(pathArg);
 var assets = path.resolve("assets");
-
-var serverPort = program.port || 3000;
 
 fs.copySlide(presentation);
 fs.copyAssets(assets);

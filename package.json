@@ -1,6 +1,6 @@
 {
   "name": "spectacle-present",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Spectacle presentation server with a single command.",
   "scripts": {
     "clean": "rimraf dist",

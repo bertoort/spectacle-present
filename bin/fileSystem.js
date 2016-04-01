@@ -13,11 +13,17 @@ module.exports = {
 
   copyAssets: function (assets) {
     console.log("Copying Assets...");
-    fs.copy(assets, path.join(__dirname, "../assets"), err => {
-      if (err) {
-        console.log(err);
+    fs.stat(assets, (err, stat) => {
+      if(!err) {
+        fs.copy(assets, path.join(__dirname, "../assets"), err => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("Done.");
+          }
+        });
       } else {
-        console.log("Done.");
+        console.log("No Assets Found.");
       }
     });
   },
@@ -26,9 +32,13 @@ module.exports = {
     fs.watch(presentation, (event, filename) => {
       this.copySlide(presentation);
     });
-    fs.watch(assets, (event, filename) => {
-      this.copyAssets(assets);
-    })
+    fs.stat(assets, (err, stat) => {
+      if(!err) {
+        fs.watch(assets, (event, filename) => {
+          this.copyAssets(assets);
+        })
+      }
+    });
   }
 
 }
