@@ -1,12 +1,11 @@
 {
   "name": "spectacle-present",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Spectacle presentation server with a single command.",
   "scripts": {
-    "clean": "rimraf dist",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
-    "start": "NODE_ENV=development node server.js"
+    "clean": "rimraf dist",
+    "start": "node ./bin/server.js"
   },
   "author": "bertoort",
   "license": "MIT",

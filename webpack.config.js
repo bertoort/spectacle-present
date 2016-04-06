@@ -4,7 +4,6 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
-  devtool: "source-map",
   entry: [
     path.join(__dirname, "node_modules/webpack-hot-middleware/client"),
     path.join(__dirname, "node_modules/babel-polyfill"),
@@ -22,10 +21,10 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.md$/,
-      loader: "html-loader!markdown-loader?gfm=false"
+      loader: path.join(__dirname, "html-loader!markdown-loader?gfm=false")
     }, {
       test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
+      exclude: path.join(__dirname, "node_modules"),
       loader: path.join(__dirname, "node_modules/babel-loader")
     }, {
       test: /\.css$/,
